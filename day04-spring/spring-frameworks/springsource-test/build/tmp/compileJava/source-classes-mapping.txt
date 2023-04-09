@@ -1,0 +1,11 @@
+com/atguigu/spring/bean/Cat.java
+ com.atguigu.spring.bean.Cat
+com/atguigu/spring/MainTest.java
+ com.atguigu.spring.MainTest
+com/atguigu/spring/AnnotationMainTest.java
+ com.atguigu.spring.AnnotationMainTest
+com/atguigu/spring/config/MainConfig.java
+ com.atguigu.spring.config.MainConfig
+ com.atguigu.spring.config.MainConfig$MyImportRegistrar
+com/atguigu/spring/bean/Person.java
+ com.atguigu.spring.bean.Person

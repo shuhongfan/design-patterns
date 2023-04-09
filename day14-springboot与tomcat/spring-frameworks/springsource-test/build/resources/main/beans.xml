@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.atguigu.spring.bean.Person" id="person" autowire="byType" >
+		<property name="name" value="张三"/>
+ 	</bean>
+
+
+<!--	bean class="com.atguigu.spring.bean.Cat" id="cat" abstract="true" lazy-init="true"  -->
+	<bean class="com.atguigu.spring.bean.Cat" id="cat" >
+<!--		<constructor-arg-->
+		<property name="name" value="张三的猫"/>
+ 	</bean>
+
+
+	<bean class="com.atguigu.spring.bean.HelloFactory" id="hello" />
+<!--	xml  转为 BeanDefinition 这个java对象-->
+	
+<!--	<import resource=""-->
+</beans>
