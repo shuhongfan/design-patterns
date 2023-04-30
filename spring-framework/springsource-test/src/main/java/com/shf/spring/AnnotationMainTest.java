@@ -1,12 +1,8 @@
-package com.shf.spring.test;
+package com.shf.spring;
 
-import com.shf.spring.bean.Cat;
-import com.shf.spring.bean.Person;
+import com.shf.spring.aop.HelloService;
 import com.shf.spring.config.MainConfig;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 注解Spring的用法
@@ -34,11 +30,15 @@ public class AnnotationMainTest {
 //		Cat cat1 = bean2.getCat();
 //		System.out.println(cat1 == cat); // true  Person是单实例的，导致获取的Cat就是第一次创建Person对象的时候，容器初始化cat
 
-		Person person = context.getBean(Person.class);
-		ApplicationContext context1 = person.getContext();
-		MessageSource messageSource = person.getMessageSource();
-		System.out.println(context1);
-		System.out.println(messageSource);
-		System.out.println(context == context1);
+//		Person person = context.getBean(Person.class);
+//		ApplicationContext context1 = person.getContext();
+//		MessageSource messageSource = person.getMessageSource();
+//		System.out.println(context1);
+//		System.out.println(messageSource);
+//		System.out.println(context == context1);
+
+//		AOP
+		HelloService helloService = context.getBean(HelloService.class);
+		helloService.sayHello("zhangsan");
 	}
 }

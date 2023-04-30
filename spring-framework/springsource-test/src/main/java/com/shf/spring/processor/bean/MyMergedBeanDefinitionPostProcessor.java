@@ -14,6 +14,7 @@ public class MyMergedBeanDefinitionPostProcessor implements MergedBeanDefinition
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		System.out.println("MyMergedBeanDefinitionPostProcessor...postProcessBeforeInitialization...=>"+bean+"--"+beanName);
+//		可以对bean定义信息进行修改
 		return null;
 	}
 

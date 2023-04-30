@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * BeanFactory的后置处理器  , PriorityOrdered, Ordered
  */
 @Component
-public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {
+public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor,PriorityOrdered,Ordered {
 	public MyBeanDefinitionRegistryPostProcessor(){
 		System.out.println("MyBeanDefinitionRegistryPostProcessor");
 	}
@@ -28,4 +28,8 @@ public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegi
 
 	}
 
+	@Override
+	public int getOrder() {
+		return 0;  // 数字越小，优先级越高
+	}
 }

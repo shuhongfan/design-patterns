@@ -426,7 +426,9 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 					logger.trace("Scanning " + resource);
 				}
 				try {
+					// 生成每一个资源的元数据信息
 					MetadataReader metadataReader = getMetadataReaderFactory().getMetadataReader(resource);
+					// 如果当前类在扫描访问
 					if (isCandidateComponent(metadataReader)) {
 						ScannedGenericBeanDefinition sbd = new ScannedGenericBeanDefinition(metadataReader);
 						sbd.setSource(resource);

@@ -116,6 +116,11 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
 	}
 
 	@Override
+	public int loadBeanDefinitions(Resource resource) throws BeanDefinitionStoreException {
+		return 0;
+	}
+
+	@Override
 	public final BeanDefinitionRegistry getRegistry() {
 		return this.registry;
 	}

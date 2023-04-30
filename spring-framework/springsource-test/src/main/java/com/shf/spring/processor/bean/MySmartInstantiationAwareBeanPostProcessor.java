@@ -11,6 +11,8 @@ public class MySmartInstantiationAwareBeanPostProcessor implements SmartInstanti
 	public MySmartInstantiationAwareBeanPostProcessor(){
 		System.out.println("MySmartInstantiationAwareBeanPostProcessor...");
 	}
+
+	// 初始化之前进行后置处理，Spring留给我们这个组件创建对象的回调
 	public Class<?> predictBeanType(Class<?> beanClass, String beanName) throws BeansException {
 		System.out.println("MySmartInstantiationAwareBeanPostProcessor...predictBeanType=>"+beanClass+"--"+beanName);
 		return null;

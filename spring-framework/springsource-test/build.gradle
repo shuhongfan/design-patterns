@@ -16,6 +16,9 @@ dependencies {
 //    引入spring核心容器
     implementation(project(":spring-context"))
 
+//    引入AOP&切面模块
+    implementation(project(":spring-aspects"))
+
 //    引入lombok
     compileOnly 'org.projectlombok:lombok:1.18.26'
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
